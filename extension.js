@@ -80,7 +80,7 @@ function updateStatusBar() {
   const hours = Math.floor(elapsedMs / (1000 * 60 * 60));
   
   // Siempre usar formato corto
-  const timeText = `⏱️ ${hours}h ${minutes}m ${seconds}s`;
+  const timeText = `⏱️ ${hours}h ${minutes}m `;
   
   statusBarItem.text = timeText;
 }
