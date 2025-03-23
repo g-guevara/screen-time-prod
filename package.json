@@ -1,0 +1,51 @@
+{
+    "name": "mi-tiempo-pantalla",
+    "displayName": "Mi Tiempo de Pantalla",
+    "description": "Muestra el tiempo de uso en la barra de estado de VS Code con análisis gráfico",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.60.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onStartupFinished"
+    ],
+    "main": "./extension.js",
+    "contributes": {
+        "commands": [
+            {
+                "command": "mi-tiempo-pantalla.showStats",
+                "title": "Mostrar Estadísticas de Tiempo de Pantalla"
+            }
+        ],
+        "viewsContainers": {
+            "panel": [
+                {
+                    "id": "tiempoPantallaView",
+                    "title": "Análisis de Tiempo de Pantalla",
+                    "icon": "$(clock)"
+                }
+            ]
+        },
+        "views": {
+            "tiempoPantallaView": [
+                {
+                    "id": "tiempoPantallaStats",
+                    "name": "Estadísticas de Tiempo"
+                }
+            ]
+        }
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "dependencies": {
+        "chart.js": "^3.9.1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "type": "commonjs"
+}
